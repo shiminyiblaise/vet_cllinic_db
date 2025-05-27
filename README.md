@@ -1,7 +1,7 @@
 # vet_cllinic_db
 Veterinary clinic is a PostgreSQL-based project which showcases the creation, querying, and management of data related to animals in a veterinary context. It provides a basic yet instructive example of data handling for educational purposes.
 
-# vet_clinic_db
+# Veterinary-Clinic
 
 <a name="readme-top"></a>
 
@@ -9,7 +9,7 @@ Veterinary clinic is a PostgreSQL-based project which showcases the creation, qu
 
   <br/>
 
-  <h1><b>MOVIES SHOW</b></h1>
+  <h1><b> Veterinary-Clinic</b></h1>
 
 </div>
 
