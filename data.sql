@@ -16,10 +16,10 @@ VALUES (4, 'Devimon', '2017-05-12', 5, TRUE, 11.00);
 
 /* Populate database with sample data. */
 
-INSERT INTO animals (id, name, date_of_birth, escape_attempts, neutered, weight_kg)
+INSERT INTO animals (id, name, date_of_birth, escape_attempts, nuetered, weight_kg)
 VALUES (1, 'Agumon', '2020-02-03', 0, TRUE, 10.23);
 
-INSERT INTO animals (id, name, date_of_birth, escape_attempts, neutered, weight_kg)
+INSERT INTO animals (id, name, date_of_birth, escape_attempts, nuetered, weight_kg)
 VALUES (2, 'Gabumon', '2018-11-15', 2, TRUE, 8);
 
 INSERT INTO animals (id, name, date_of_birth, escape_attempts, neutered, weight_kg)
@@ -59,15 +59,15 @@ INSERT INTO species (name)
 VALUES ('Pokemon'),('Digimon');
 /* Update the animals table to have the right suffix for species*/
 UPDATE animals SET species_id = CASE
-    WHEN name LIKE '%mon' THEN (SELECT id FROM species WHERE name = 'Digimon')
-    ELSE (SELECT id FROM species WHERE name = 'Pokemon')
+    WHEN name LIKE '%mon' THEN (SELECT Id FROM species WHERE name = 'Digimon')
+    ELSE (SELECT Id FROM species WHERE name = 'Pokemon')
   END;
 /*Update owner_id for Agumon*/
-UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Sam Smith') WHERE name = 'Agumon';
+UPDATE animals SET owner_id = (SELECT Id FROM owners WHERE full_name = 'Sam Smith') WHERE name = 'Agumon';
 /*Update owner_id for Gabumon*/
-UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell') WHERE name = 'Gabumon';
+UPDATE animals SET owner_id = (SELECT Id FROM owners WHERE full_name = 'Jennifer Orwell') WHERE name = 'Gabumon';
 /*Update owner_id for Pikachu*/
-UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell') WHERE name = 'Pikachu';
+UPDATE animals SET owner_id = (SELECT Id FROM owners WHERE full_name = 'Jennifer Orwell') WHERE name = 'Pikachu';
 /*Update owner_id for Devimon*/
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Bob') WHERE name = 'Devimon';
 /*Update owner_id for Plantmon*/
